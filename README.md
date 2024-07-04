@@ -37,16 +37,15 @@ It always takes time to run and test in the Oculus device so instead I provide y
 
 <img src="https://github.com/dilmerv/VRDraw/blob/master/docs/images/instructions_1.png" width="300">
 
-2- Hit Play in the editor and use the following keyboard keys to move around, draw, and bring draw UI options:
+2- Hit Play in the editor and use VR headset and controllers to move around, draw, and bring draw UI options:
 
 ### Movement and drawing
-* Left arrow, right arrow, down arrow, up arrow - Movement
-* Press and hold K - Emulates drawing with left controller
-* Press and hold L - Emulates drawing with right controller
+* Left arrow, right arrow, down arrow, up arrow – Movement
+* Press and hold triggers – Emulate drawing
 
 ### VR Draw Options
 * Press X - Opens left controller drawing options
-* Press Z - Opens right controller drawing options
+* Press A - Opens right controller drawing options
 * Left arrow, right arrow, down arrow, up arrow - To move through drawing options
-* Press L - Select drawing option on left controller
-* Press R - Select drawing option on right controller
+* Press Y - Select drawing option on left controller
+* Press B - Select drawing option on right controller
