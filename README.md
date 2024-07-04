@@ -1,6 +1,6 @@
 # VR Draw (A Draw Oculus Experience
 
-An open source project demonstrating how to draw in virtual reality. And it is forked from https://github.com/dilmerv/VRDraw.git.
+An open source project demonstrating how to draw in virtual reality. It is forked from https://github.com/dilmerv/VRDraw.git used for data collection for my project.
 
 ## VR Draw Main Scene (With Hands)
 
