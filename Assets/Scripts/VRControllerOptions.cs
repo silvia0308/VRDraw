@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Linq;
 using DilmerGames.Core.Singletons;
 using DilmerGames.Enums;
@@ -71,7 +71,7 @@ namespace DilmerGames
             selectedOption = options[currentOption];
         }
 
-        void Update()
+        void Update() // modified by S. Wang
         {
             // left hand
             if(controlHand == ControlHand.Left)
@@ -97,11 +97,11 @@ namespace DilmerGames
                     FocusOption(true);
 
                 // select option
-                if((OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger) || Input.GetKeyDown(KeyCode.L)) && ShoudActivateColor())
+                if((OVRInput.GetDown(OVRInput.RawButton.Y) || Input.GetKeyDown(KeyCode.L)) && ShoudActivateColor())
                     SelectOption(true);
 
                 // unselect option
-                if((OVRInput.GetUp(OVRInput.Button.PrimaryIndexTrigger) || Input.GetKeyUp(KeyCode.L)))
+                if((OVRInput.GetUp(OVRInput.RawButton.Y) || Input.GetKeyUp(KeyCode.L)))
                     SelectOption(false);
             }
             // right hand
@@ -128,11 +128,11 @@ namespace DilmerGames
                     FocusOption(true);
 
                 // select option
-                if((OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger) || Input.GetKeyDown(KeyCode.R)) && ShoudActivateColor())
+                if((OVRInput.GetDown(OVRInput.RawButton.B) || Input.GetKeyDown(KeyCode.R)) && ShoudActivateColor())
                     SelectOption(true);
 
                 // unselect option
-                if((OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger) || Input.GetKeyUp(KeyCode.R)))
+                if((OVRInput.GetUp(OVRInput.RawButton.B) || Input.GetKeyUp(KeyCode.R)))
                     SelectOption(false);
             }
         }
