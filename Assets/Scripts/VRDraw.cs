@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections.Generic;
 using DilmerGames.Enums;
 using DilmerGames.Core.Utilities;
@@ -111,35 +111,35 @@ namespace DilmerGames
                 AddNewLineRenderer();
             }
 
-    #endif
+#endif
 
-    #if UNITY_EDITOR
+#if UNITY_EDITOR // modified by S. Wang
             if(!allowEditorControls) return;
 
             // left controller
-            if(controlHand == ControlHand.Left && Input.GetKey(KeyCode.K))
+            if(controlHand == ControlHand.Left && OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger))
             {
                 VRStats.Instance.firstText.text = $"Input.GetKey(KeyCode.K) {Input.GetKey(KeyCode.K)}";
                 UpdateLine();
             }
-            else if(controlHand == ControlHand.Left && Input.GetKeyUp(KeyCode.K))
+            else if(controlHand == ControlHand.Left && OVRInput.GetUp(OVRInput.Button.PrimaryIndexTrigger))
             {
                 VRStats.Instance.secondText.text = $"Input.GetKeyUp(KeyCode.K) {Input.GetKeyUp(KeyCode.K)}";
                 AddNewLineRenderer();
             }
 
             // right controller
-            if(controlHand == ControlHand.Right && Input.GetKey(KeyCode.L))
+            if(controlHand == ControlHand.Right && OVRInput.Get(OVRInput.Button.SecondaryIndexTrigger))
             {
                 VRStats.Instance.firstText.text = $"Input.GetKey(KeyCode.L): {Input.GetKey(KeyCode.L)}";
                 UpdateLine();
             }
-            else if(controlHand == ControlHand.Right && Input.GetKeyUp(KeyCode.L))
+            else if(controlHand == ControlHand.Right && OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger))
             {
                 VRStats.Instance.secondText.text = $"Input.GetKeyUp(KeyCode.L): {Input.GetKeyUp(KeyCode.L)}";
                 AddNewLineRenderer();
             }
-    #endif
+#endif
         }
 
         void UpdateLine()
